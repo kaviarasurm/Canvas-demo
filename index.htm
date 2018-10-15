@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Canvas Demo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"  content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	<div class="container">
+		<section class="section">
+		<canvas id="canvas" width="500px" height="500px"></canvas>
+		</section>
+		<section class="section">
+			<canvas id="canvas1" width="500px" height="500px"></canvas>
+		</section>
+		<section class="section">
+			<canvas id="canvas2" width="500px" height="500px"></canvas>
+		</section>
+		<section class="section">
+			<canvas id="canvas3" width="500px" height="500px"></canvas>
+		</section>
+		<section class="section">
+			<canvas id="canvas4" width="500px" height="500px"></canvas>
+		</section>
+		<section class="section">
+			<canvas id="canvas5" width="500px" height="500px"></canvas>
+		</section>
+		<section class="section">
+			<canvas id="canvas6" width="500px" height="500px"></canvas>
+		</section>
+		<section class="section">
+			<canvas id="canvas7" width="500px" height="500px"></canvas>
+		</section>
+		<section class="section">
+			<canvas id="canvas8" width="500px" height="500px"></canvas>
+		</section>
+		<section class="section">
+			<canvas id="canvas9" width="500px" height="500px"></canvas>
+		</section>
+		<section class="section">
+			<canvas id="canvas10" width="500px" height="500px"></canvas>
+		</section>
+		<section class="section">
+			<canvas id="canvas11" width="500px" height="500px"></canvas>
+		</section>
+		<section class="section">
+			<canvas id="canvas12" width="500px" height="500px"></canvas>
+		</section>
+		
+		<section class="section">	
+		
+		
+		<svg class="page-home__map" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 200" enable-background="new 0 0 500 200" xml:space="preserve">
+		
+
+			
+			
+			<rect x="10" y="10" width="100" height="100" stroke="#006666" fill="transparent" stroke-width="2"/>
+			
+		</svg>
+		
+			<canvas id="man" width="95px" height="105px"></canvas>
+		</section>
+		
+	</div>
+	
+	<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="js/custom-js.js"></script>
+	<script type="text/javascript" src="http://oss.maxcdn.com/libs/snapsvg/0.1.0/snap.svg-min.js"></script>
+	<script>
+		
+		
+		
+		(function(){
+			var pos =  {x: 0, y:0};
+				
+			var c = document.getElementById('man'),
+			  ctx = c.getContext('2d');
+
+			function repaint(){
+				ctx.fillRect(0,0,c.width,c.height);
+				
+				ctx.clearRect(0, 0, c.width, c.height);
+				ctx.fillStyle = '#333'
+				ctx.strokeStyle="red";
+				
+				ctx.arc(15, 15, 4,0,2*Math.PI);
+				
+				ctx.moveTo(23, 20);
+				ctx.lineTo(65, 55);
+				
+				ctx.moveTo(65, 55);
+				ctx.lineTo(35, 75);
+				
+				ctx.moveTo(35, 75);
+				ctx.lineTo(40, 95);
+				
+				ctx.moveTo(65, 55);
+				ctx.lineTo(60, 75);
+				
+				ctx.moveTo(60, 75);
+				ctx.lineTo(85, 95);
+				
+				ctx.moveTo(23, 20);
+				ctx.lineTo(15, 40);
+				
+				ctx.moveTo(15, 40);
+				ctx.lineTo(5, 35);
+				
+				ctx.moveTo(23, 20);
+				ctx.lineTo(55, 13);
+				
+				ctx.moveTo(55, 13);
+				ctx.lineTo(65, 25);
+				
+				//ctx.fill();	
+				//ctx.stroke();	
+				
+				ctx.closePath();
+				console.log(pos);
+			}
+			
+
+			function draw (){
+			
+				ctx.clearRect(0, 0, c.width, c.height);				 
+				ctx.fillRect(0, 0, c.width, c.height);
+				repaint();
+				
+				if(pos.x <= 30){
+					pos.x++;
+				} else {
+				  pos.x = 0;
+				  pos.y=5;
+				}
+
+				ctx.fillStyle = '#333';
+				
+				ctx.transform(0,0,0,0,pos.x,pos.y);				
+				ctx.setTransform(1,0,0,1,pos.x, pos.y);
+				//ctx.fillRect(0,50,50,50);
+
+				//ctx.fill();	
+				ctx.stroke();	
+				
+				//console.log(pos);
+				
+				var framesPerSecond = 100;
+				
+				setTimeout(function() {
+					//requestAnimationFrame(draw);		 
+				}, 1000 / framesPerSecond);
+				
+			}
+
+			draw();
+		})();
+		
+		//M10,10 C500,200 125,20 450,50
+		function animateDivers() {		
+			var target = document.querySelector('#man');
+			var player = target.animate([
+//			  {transform: 'translate(0)'},
+			  {transform: 'translate(10px, 10px)'},
+			  {transform: 'translate(300px, 10px)'},
+			  //{transform: 'translate(125px, 20px)'},
+			  {transform: 'translate(300px, 300px)'},
+			  {transform: 'translate(10px, 300px)'},
+			  {transform: 'translate(10px, 10px)'}
+			], 5000, function() {
+				//animateDivers();
+			});
+		}		
+		setInterval(function(){ animateDivers(); }, 5000);
+
+		
+		
+		//M50,50 C75,80 125,20 150,50
+	</script>
+	
+	
+</body>
+</html>

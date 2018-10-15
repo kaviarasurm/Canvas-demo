@@ -1,0 +1,315 @@
+html {
+    font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+b,
+strong {
+  font-weight: inherit;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+small {
+  font-size: 80%;
+}
+
+img {
+  border: 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0; 
+  overflow: visible; 
+}
+
+pre {
+  overflow: auto;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+button:-moz-focusring,
+input:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+textarea {
+  overflow: auto;
+}
+.container{
+	width: 980px;
+	margin: 0 auto;
+	display: table;
+}
+.section{
+	width: 100%;
+    height: 100vh;
+	display:block;
+	border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+
+#ball {
+  display: block;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  margin: 50px auto;
+  background: white;
+}
+
+#ball.red {
+  -webkit-animation: powpow 0.75s ease forwards;
+  -moz-animation: powpow 0.75s ease forwards;
+  -o-animation: powpow 0.75s ease forwards;
+  animation: powpow 0.75s ease forwards;
+}
+
+@-webkit-keyframes powpow {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes powpow {
+  0% {
+    -moz-transform: scale(1);
+  }
+  25% {
+    -moz-transform: scale(1.2);
+  }
+  50% {
+    -moz-transform: scale(1);
+  }
+  75% {
+    -moz-transform: scale(1.1);
+  }
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+@-o-keyframes powpow {
+  0% {
+    -o-transform: scale(1);
+  }
+  25% {
+    -o-transform: scale(1.2);
+  }
+  50% {
+    -o-transform: scale(1);
+  }
+  75% {
+    -o-transform: scale(1.1);
+  }
+  100% {
+    -o-transform: scale(1);
+  }
+}
+@keyframes powpow {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.3);
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+#text {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#svg-container {
+  background: rgba(232, 0, 0, 0.2);
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 500px;
+  padding: 10px 0;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+#svgC {
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+#svgC > path {
+	width: 100%;
+} 
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  background: #5a89bd;
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  box-shadow: 0 3px 0px #304c6c;
+  margin: 0 10px 20px 0;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.2s ease;
+}
+
+.btn:active {
+  box-shadow: 0 0px 0px #304c6c;
+  top: 3px;
+}
+
+button.disabled,
+button[disabled],
+button[disabled="disabled"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.disabled:active,
+button[disabled]:active,
+button[disabled="disabled"]:active {
+  top: 0;
+  border-bottom: 3px solid #304c6c;
+}
+canvas#man {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
